@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ConnectLLM ご利用にあたって</title>
+<style>:root{color-scheme:light dark}
+*{box-sizing:border-box}
+body{margin:0 auto;padding:2rem 1.25rem 4rem;font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",sans-serif;line-height:1.9;max-width:44rem;background:#fff;color:#1a1a1a}
+@media(prefers-color-scheme:dark){body{background:#141414;color:#e8e8e8}}
+h1{font-size:1.6rem;line-height:1.4;margin:0 0 .5rem;padding-bottom:.75rem;border-bottom:2px solid currentColor}
+h2{font-size:1.15rem;margin:2.5rem 0 .75rem;padding-bottom:.4rem;border-bottom:1px solid rgba(128,128,128,.35)}
+p{margin:.9rem 0}
+.para{margin:.9rem 0 .9rem 1.7rem;text-indent:-1.7rem}
+.item{margin:.7rem 0 .7rem 2.8rem;text-indent:-1.4rem}
+.date{opacity:.7;font-size:.9rem}
+.note{opacity:.75;font-size:.92rem;border-left:3px solid rgba(128,128,128,.4);padding-left:.9rem;margin:1rem 0}
+ul{padding-left:1.4rem}
+li{margin:.6rem 0}
+a{color:inherit}
+hr{border:0;border-top:1px solid rgba(128,128,128,.3);margin:2.5rem 0}
+footer{margin-top:3rem;padding-top:1rem;border-top:1px solid rgba(128,128,128,.3);opacity:.7;font-size:.88rem}</style>
+</head>
+<body>
+<h1>ConnectLLM ご利用にあたって</h1>
+<p class="date">最終更新日: 2026年9月4日</p>
+<hr>
+<h2>1. この文書について</h2>
+<p>本書は，ConnectLLM（以下「本アプリ」という．）を利用するにあたって，利用者に承知しておいてもらいたい事項を定めるものである．本アプリをインストールし又は利用した時点で，利用者は本書の内容に同意したものとみなす．</p>
+<h2>2. 本アプリの位置づけ</h2>
+<p class="para">1.　本アプリは，LLM（大規模言語モデル）を提供するサーバー又はサービスに接続するためのクライアントである．本アプリ自体は LLM を内蔵せず，開発者は LLM を提供しない．</p>
+<p class="para">2.　接続先は，利用者が自ら用意し又は契約するものである．接続先の可用性，応答の内容，料金及び規約について，開発者は関与せず，責任を負わない．</p>
+<h2>3. 応答の性質</h2>
+<p class="para">1.　本アプリに表示される応答は，接続先の LLM が生成したものであり，事実と異なること，不完全であること，又は偏りを含むことがある．</p>
+<p class="para">2.　応答を根拠として何らかの判断又は行為をする場合，その当否の確認は利用者の責任において行う．</p>
+<p class="para">3.　道具（ウェブ検索・ページ取得・画像生成）を有効にした場合，検索語・取得先・画像の指示文はモデルが決める．モデルは，取得したページに書かれた文章に誘導されることがある．本アプリはこれを防ぐための仕組み（端末内・ローカルネットワークへの到達の遮断，会話の内容を運ぶ URL の遮断，取得した本文の信頼境界の明示，画像生成の送信前確認，外部通信の記録）を備えるが，完全ではない．</p>
+<h2>4. 接続先について</h2>
+<p class="para">1.　クラウドの LLM サービスに接続する場合，会話の本文・添付・システムプロンプトはその事業者へ送信され，その事業者の規約に従って取り扱われる．送信した内容の保存・学習への利用の有無は，事業者ごとに異なる．</p>
+<p class="para">2.　API キーは利用者自身が発行し，利用者の責任で管理する．キーの利用に伴う料金は利用者が負担する．本アプリは，平文の HTTP でキーを送ろうとするとき，その旨を警告する．</p>
+<p class="para">3.　本アプリは，接続先が利用者の管理下のネットワークにあるか，中継サービスを経由するか，クラウドであるかを画面に表示する．この表示は宛先の区分を示すものであり，通信経路の安全性を保証するものではない．</p>
+<p class="para">4.　中継サービス（トンネル等）を経由する場合，通信は中継事業者の設備を通る．</p>
+<h2>5. データの取扱い</h2>
+<p class="para">1.　会話・添付・設定は端末内に保存される．会話のデータベースは端末のバックアップの対象から外しているため，端末を交換する場合は，本アプリの書き出し機能で移す必要がある．</p>
+<p class="para">2.　書き出したファイルには会話の全文と添付が含まれる．パスフレーズを設定しない書き出しは平文である．保管と共有には注意すること．</p>
+<p class="para">3.　パスフレーズを忘れた場合，暗号化した書き出しファイルを復元することはできない．開発者もこれを復元できない．</p>
+<p class="para">4.　本アプリをアンインストールすると，会話・添付・設定は端末から削除される．API キーは端末の Keychain に保存されており，OS の仕様により，アンインストール後も端末内に残ることがある．不要になった鍵は，アンインストールの前に設定画面で削除するか，発行元で失効させること．</p>
+<h2>6. 動作について</h2>
+<p class="para">1.　開発者は，本アプリが利用者の環境において常に正常に動作することを保証しない．</p>
+<p class="para">2.　アプリを閉じた後の応答の生成の継続は，OS のバージョン及びシステムの状態により，途中で打ち切られることがある．打ち切られた場合，その時点までの応答を保存し，続きを生成する操作を提供する．</p>
+<p class="para">3.　接続先の仕様変更により，一部の機能（モデル一覧の取得，道具の呼び出し等）が動作しなくなることがある．</p>
+<p class="para">4.　本アプリの利用により利用者に生じた損害について，開発者は，故意又は重大な過失による場合を除き，責任を負わない．</p>
+<h2>7. 言語</h2>
+<p>本書は日本語を正文とする．他の言語に翻訳して提供する場合において，日本語版と他の言語版との間に相違があるときは，日本語版の解釈が優先する．</p>
+<h2>8. 本書の変更</h2>
+<p>開発者は，本書の内容を変更することがある．変更した場合は，本ページを更新し，最終更新日を改める．</p>
+<h2>9. 問合せ</h2>
+<p>本書に関する問合せは，<a href="support.html">お問い合わせ</a>のページに掲げる連絡先による．</p>
+<footer><a href="./">ConnectLLM</a></footer>
+</body>
+</html>
